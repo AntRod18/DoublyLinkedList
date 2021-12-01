@@ -19,7 +19,7 @@ class DoublyLinkedList{
             this.head = newNode;
             this.tail = newNode;
         } else {
-            this.tail = newNode;
+            this.tail.next = newNode;
             newNode.prev = this.tail;
             this.tail = newNode;
         }
@@ -132,3 +132,12 @@ class DoublyLinkedList{
         return removedNode;
     }
 }
+
+/*
+Big O -
+
+Insertion - O(1)
+Removal - O(1)
+Searching - O(N)
+Access - O(N)
+*/
